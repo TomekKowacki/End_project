@@ -31,6 +31,9 @@ public class Rent {
     @Column(name = "RETURN_DATE")
     private LocalDate dateOfReturn;
 
+    @Column(name = "SITE_ADDRES")
+    private String siteAddres;
+
     @OneToMany(
             targetEntity = Item.class,
             mappedBy = "rent",

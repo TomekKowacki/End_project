@@ -16,5 +16,5 @@ public class GroupItemDto {
 
     private Long id;
     private String name;
-
+    private List<String> items;
 }

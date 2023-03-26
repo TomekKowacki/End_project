@@ -36,9 +36,6 @@ public class User {
     @Column(name = "PHONE")
     private int phone;
 
-    @Column(name = "SITE_ADDRES")
-    private String siteAddres;
-
     @OneToMany(
             targetEntity = Rent.class,
             mappedBy = "user",
