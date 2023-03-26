@@ -20,6 +20,7 @@ public class UserMapper {
                 userDto.getLastName(),
                 userDto.getPesel(),
                 userDto.getPhone(),
+                userDto.isBlocked(),
                 userDto.getRentsList()
         );
     }
@@ -37,6 +38,7 @@ public class UserMapper {
                 user.getLastName(),
                 user.getPesel(),
                 user.getPhone(),
+                user.isBlocked(),
                 rentsList
         );
     }

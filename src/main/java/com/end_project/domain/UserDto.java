@@ -17,5 +17,6 @@ public class UserDto {
     private String lastName;
     private int pesel;
     private int phone;
+    private boolean isBlocked;
     private List<Rent> rentsList;
 }

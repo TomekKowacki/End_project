@@ -36,6 +36,9 @@ public class User {
     @Column(name = "PHONE")
     private int phone;
 
+    @Column(name = "BLOCK")
+    private boolean isBlocked;
+
     @OneToMany(
             targetEntity = Rent.class,
             mappedBy = "user",
