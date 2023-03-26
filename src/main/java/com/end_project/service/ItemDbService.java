@@ -26,7 +26,7 @@ public class ItemDbService {
         return repository.save(item);
     }
 
-    public void deleteProduct (Long id) throws ItemNotFoundException {
+    public void deleteItem (Long id) throws ItemNotFoundException {
         if (repository.existsById(id)) {
             repository.deleteById(id);
         } else {
