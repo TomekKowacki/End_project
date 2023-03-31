@@ -1,11 +1,10 @@
 package com.end_project.domain;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @AllArgsConstructor
@@ -14,8 +13,8 @@ import java.util.List;
 public class RentDto {
 
     private Long id;
-    private LocalDate dateOfRent;
-    private LocalDate dateOfReturn;
+    private LocalDateTime dateOfRent;
+    private LocalDateTime dateOfReturn;
     private String siteAddres;
     private List<Item> items;
     private Long userId;
