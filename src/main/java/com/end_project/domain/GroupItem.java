@@ -1,11 +1,11 @@
 package com.end_project.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "GROUP_ITEM")
+@Table(name = "ITEMS_GROUP")
 public class GroupItem {
 
     @Id

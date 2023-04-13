@@ -1,25 +1,21 @@
 package com.end_project.domain;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "products")
+@RequiredArgsConstructor
+@Entity(name = "item")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ITEM_ID", unique = true)
+    @Column(name = "ID", unique = true)
     private Long id;
 
     @Column(name = "NAME")
@@ -32,7 +28,7 @@ public class Item {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "GROUP_ITEM")
+    @JoinColumn(name = "GROUP_ID")
     private GroupItem groupItem;
 
     @ManyToOne

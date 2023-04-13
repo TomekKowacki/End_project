@@ -1,12 +1,13 @@
 package com.end_project.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +25,10 @@ public class Rent {
     @Column(name = "ID", unique = true)
     private Long id;
 
-    @Column(name = "RENT_DATE")
+    @Column(name = "DATE_OF_RENT")
     private LocalDateTime dateOfRent;
 
-    @Column(name = "RETURN_DATE")
+    @Column(name = "DATE_OF_RETURN")
     private LocalDateTime dateOfReturn;
 
     @Column(name = "SITE_ADDRES")
@@ -43,6 +44,14 @@ public class Rent {
     @ManyToOne
     @JoinColumn(name = "USER_ID")
     private User user;
+
+
+    public Rent(LocalDateTime dateOfRent, LocalDateTime dateOfReturn, User user, Item item) {
+        this.dateOfRent = dateOfRent;
+        this.dateOfReturn = dateOfReturn;
+        this.user = user;
+        this.item = (List<Item>) item;
+    }
 
 
 }

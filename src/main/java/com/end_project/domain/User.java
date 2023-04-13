@@ -1,17 +1,16 @@
 package com.end_project.domain;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.stereotype.Repository;
 
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -26,7 +25,7 @@ public class User {
     @Column(name = "NAME")
     private String name;
 
-    @Column(name = "LAST_NAME")
+    @Column(name = "LASTNAME")
     private String lastName;
 
     @Column(name = "PESEL")
