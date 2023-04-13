@@ -16,7 +16,7 @@ public class ItemTests {
     private ItemRepo itemRepository;
 
     @Test
-    void testFindBikeById() {
+    void testFindItemById() {
 
         //Given
         Item mlot = new Item();
@@ -57,7 +57,7 @@ public class ItemTests {
     }
 
     @Test
-    void testDeleteBikeById() {
+    void testDeleteItemById() {
 
         //Given
         Item mlot = new Item();

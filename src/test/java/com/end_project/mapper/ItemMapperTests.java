@@ -17,7 +17,7 @@ public class ItemMapperTests {
     private ItemMapper itemMapper;
 
     @Test
-    void testMapToBikeDto() {
+    void testMapToItemDto() {
         //Given
         Item mlot = new Item();
         mlot.setName("Młot");
@@ -38,7 +38,7 @@ public class ItemMapperTests {
     }
 
     @Test
-    void testMapToBike() {
+    void testMapToItem() {
         //Given
         Item mlot = new Item();
         mlot.setName("Młot");
@@ -59,7 +59,7 @@ public class ItemMapperTests {
     }
 
     @Test
-    void testMapToBikeListDto() {
+    void testMapToItemListDto() {
         //Given
         Item mlot = new Item();
         mlot.setName("Młot");
